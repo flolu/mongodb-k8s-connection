@@ -62,3 +62,5 @@
 # Issue
 
 I've created this repository, because I wanted to showcase a connection issue. But after creating it from scratch it seems as if there is no issue 🤦
+
+Related issue link: https://github.com/mongodb/mongodb-kubernetes-operator/issues/108
