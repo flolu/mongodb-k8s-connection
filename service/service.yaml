@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: service
-  replicas: 1
+  replicas: 2
   template:
     metadata:
       labels:
@@ -16,6 +16,9 @@ spec:
         - name: service
           image: service:placeholder_name
           imagePullPolicy: Always
+          env:
+            - name: MONGO_DB_URL
+              value: mongodb://database-0.database-svc.mongodb.svc.cluster.local:27017,database-1.database-svc.mongodb.svc.cluster.local:27017,database-2.database-svc.mongodb.svc.cluster.local:27017/?replicaSet=database
           readinessProbe:
             httpGet:
               path: /

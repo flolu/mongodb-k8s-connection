@@ -13,6 +13,7 @@ ts_library(
     ),
     deps = [
         "@npm//@types/express",
+        "@npm//@types/mongodb",
         "@npm//@types/node",
         "@npm//express",
         "@npm//mongodb",
@@ -31,7 +32,15 @@ k8s_deploy(
     template = ":service.yaml",
 )
 
+k8s_deploy(
+    name = "ingress",
+    template = ":ingress.yaml",
+)
+
 k8s_objects(
     name = "k8s",
-    objects = [":service"],
+    objects = [
+        ":service",
+        ":ingress",
+    ],
 )

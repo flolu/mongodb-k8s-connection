@@ -41,7 +41,7 @@
 
 1. clone this repo
 2. `yarn install`
-3. Make sure `kubectl` is istalled and it points to a cluster with container registry enabled
+3. Make sure `kubectl` is istalled and it points to a cluster with ingress and container registry enabled
 4. Change cluster in the WORKSPACE file (line 65) to your cluster name and image_chroot (line 66) to your registry
 5. setup mongodb replica set on the kubernetes cluster
 
@@ -61,4 +61,4 @@
 
 # Issue
 
-# Misc
+I've created this repository, because I wanted to showcase a connection issue. But after creating it from scratch it seems as if there is no issue 🤦
